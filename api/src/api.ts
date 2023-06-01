@@ -14,15 +14,15 @@ app.get('/', (_req, res) => {
   res.status(200).send({ status: 'ok' });
 });
 
-// const api = express.Router();
+app.get('/healthz', (_req, res) => {
+  res.send(200);
+});
+
+const api = express.Router();
 
 app.get('/hello', (_req, res) => {
   res.status(200).send({ message: 'hello world' });
 });
 
-app.get('/healthz', (_req, res) => {
-  res.send(200);
-});
-
 // Version the api
-// app.use('/api/v1', api);
+app.use('/api/v1', api);
