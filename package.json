@@ -6,8 +6,10 @@
   "license": "MIT",
   "author": "Jillian Kozyra",
   "scripts": {
+    "build": "yarn workspaces foreach run build",
     "lint": "yarn npmPkgJsonLint .",
-    "typecheck": "tsc --build --force"
+    "typecheck": "tsc --build --force",
+    "start:api": "cd api && yarn run start"
   },
   "devDependencies": {
     "import-sort-style-module": "^6.0.0",
