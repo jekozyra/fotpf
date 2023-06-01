@@ -6,7 +6,7 @@
   "license": "MIT",
   "author": "Jillian Kozyra",
   "scripts": {
-    "build": "rm -rf ./build && tsc --build",
+    "build": "rm -rf ./build && tsc --build && cp ./src/index.html ./build/index.html",
     "dev": "nodemon src/index.ts",
     "start": "node build/index.js",
     "typecheck": "tsc --build"

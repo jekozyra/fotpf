@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
 
 export const app = express();
 
@@ -9,9 +10,8 @@ app.use(express.json());
 app.use(express.raw({ type: 'application/vnd.custom-type' }));
 app.use(express.text({ type: 'text/html' }));
 
-// Healthcheck endpoint
-app.get('/', (_req, res) => {
-  res.status(200).send({ status: 'ok' });
+app.get('/',function(_req, res){
+  res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 app.get('/healthz', (_req, res) => {
