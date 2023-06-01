@@ -20,5 +20,9 @@ api.get('/hello', (_req, res) => {
   res.status(200).send({ message: 'hello world' });
 });
 
+api.get('/healthz', (_req, res) => {
+  res.status(200);
+});
+
 // Version the api
 app.use('/api/v1', api);
