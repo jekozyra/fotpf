@@ -2,23 +2,27 @@
 
 # dependencies
 /node_modules
-/.pnp
+.pnp
 .pnp.js
+**/.pnp.cjs
+**/.pnp.loader.mjs
+deps.tar
+deps.tar.gz
+**/.yarn/*
+!**/.yarn/patches
+!**/.yarn/plugins
+!**/.yarn/releases
+!**/.yarn/sdks
+!**/.yarn/versions
+**/node_modules
 
 # testing
 /coverage
 
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# artifacts
+**/build
+**/dist
+**/bundle
 
 # local env files
 .env
@@ -29,3 +33,6 @@ yarn-error.log*
 
 # out dir
 dist/
+
+# vscode
+*.code-workspace
